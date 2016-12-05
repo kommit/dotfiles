@@ -54,7 +54,7 @@ plugins=(git autojump tmux tmuxinator web-search fancy-ctrl-z themes python merc
 
 # User configuration
 
-export PATH="$HOME/bin:$HOME/.npm-global/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
+export PATH="$HOME/bin:$HOME/.npm-global/bin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -86,6 +86,7 @@ export LSCOLORS="gxfxcxdxbxexexabagacad"
 # else
 #   export EDITOR='mvim'
 # fi
+export EDITOR='vim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
