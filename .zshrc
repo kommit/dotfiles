@@ -102,3 +102,10 @@ export EDITOR='vim'
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Load all files from ./rc.d directory
+if [ -d $HOME/.rc.d ]; then
+  for file in $HOME/.rc.d/*.sh; do
+    source $file
+  done
+fi
