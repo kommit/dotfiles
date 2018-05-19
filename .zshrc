@@ -109,3 +109,8 @@ if [ -d $HOME/.rc.d ]; then
     source $file
   done
 fi
+
+if [ -n "$VIRTUAL_ENV" ]; then
+  . "$VIRTUAL_ENV/bin/activate"
+fi
+
