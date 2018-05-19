@@ -21,18 +21,18 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'bufexplorer.zip'
 Plugin 'vcscommand.vim'
 Plugin 'indentpython.vim'
-Plugin 'mattn/emmet-vim'
+" Plugin 'mattn/emmet-vim'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'scrooloose/syntastic'
 Plugin 'nvie/vim-flake8'
-Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+" Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'ervandew/supertab'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'pangloss/vim-javascript'
 Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'Raimondi/delimitMate'
-Plugin 'elixir-lang/vim-elixir'
-Plugin 'posva/vim-vue'
+" Plugin 'Raimondi/delimitMate'
+" Plugin 'elixir-lang/vim-elixir'
+" Plugin 'posva/vim-vue'
 
 
 call vundle#end()            " required
