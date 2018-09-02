@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 
 import os
 import shutil
@@ -13,16 +13,16 @@ ignore_files = {
 
 home = os.path.expanduser('~')
 dotfiles = os.path.dirname(__file__)
-os.chdir(dotfiles)
+os.chdir(dotfiles or '.')
 
 for fn in glob('.*'):
     if fn in ignore_files:
         continue
     src_file = os.path.realpath(fn)
     dst_file = os.path.join(home, fn)
-    print 'Creating symlink of "%s" to "%s" ... ' % (src_file, dst_file),
+    print('Creating symlink of "%s" to "%s" ... ' % (src_file, dst_file))
     if os.path.exists(dst_file):
-        print 'destination exists, skip.'
+        print('destination exists, skip.')
     else:
         os.symlink(src_file, dst_file)
-        print 'done'
+        print('done')
