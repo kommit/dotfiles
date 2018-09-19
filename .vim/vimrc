@@ -7,35 +7,48 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+" {{{ Vundle
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" set rtp+=~/.vim/bundle/Vundle.vim
+" call vundle#begin()
+
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+" Plugin 'VundleVim/Vundle.vim'
+" }}}
+
+
+" Vim-Plug
+" Specify a directory for plugins
+" - For Neovim: ~/.local/share/nvim/plugged
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/.vim/plugged')
 
 " My plugins
-Plugin 'scrooloose/nerdtree'
-Plugin 'bufexplorer.zip'
-Plugin 'vcscommand.vim'
-Plugin 'indentpython.vim'
-" Plugin 'mattn/emmet-vim'
-Plugin 'tmhedberg/SimpylFold'
-Plugin 'scrooloose/syntastic'
-Plugin 'nvie/vim-flake8'
-" Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-Plugin 'ervandew/supertab'
-" Plugin 'jelera/vim-javascript-syntax'
-Plugin 'pangloss/vim-javascript'
-Plugin 'nathanaelkane/vim-indent-guides'
-" Plugin 'Raimondi/delimitMate'
-" Plugin 'elixir-lang/vim-elixir'
-Plugin 'posva/vim-vue'
+Plug 'scrooloose/nerdtree'
+Plug 'jlanzarotta/bufexplorer'
+Plug 'inkarkat/vcscommand.vim'
+Plug 'vim-scripts/indentpython.vim'
+" Plug 'mattn/emmet-vim'
+Plug 'tmhedberg/SimpylFold'
+Plug 'scrooloose/syntastic'
+Plug 'nvie/vim-flake8'
+" Plug 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plug 'ervandew/supertab'
+" Plug 'jelera/vim-javascript-syntax'
+" Plug 'pangloss/vim-javascript'
+Plug 'isRuslan/vim-es6'
+Plug 'nathanaelkane/vim-indent-guides'
+" Plug 'Raimondi/delimitMate'
+" Plug 'elixir-lang/vim-elixir'
+Plug 'posva/vim-vue'
+Plug 'vimwiki/vimwiki'
 
 
-call vundle#end()            " required
+call plug#end()            " required
+" call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
@@ -225,7 +238,7 @@ if has("gui_running")
 		au GUIEnter * simalt ~x
 	endif
 	" color scheme setting
-	colors wombat
+	colors desert
 else
 	" colors desert
 	colors torte
