@@ -32,7 +32,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'nathanaelkane/vim-indent-guides'
 " Plugin 'Raimondi/delimitMate'
 " Plugin 'elixir-lang/vim-elixir'
-" Plugin 'posva/vim-vue'
+Plugin 'posva/vim-vue'
 
 
 call vundle#end()            " required
@@ -203,6 +203,10 @@ set isfname-==
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
 if has("gui_running")
+	set noimdisable
+	set iminsert=2
+	set imsearch=0
+
 	"set guioptions-=m
 	set guioptions-=T
 	set guioptions-=t
