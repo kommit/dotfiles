@@ -95,12 +95,6 @@ let xml_use_xhtml = 1
 
 
 
-
-
-
-
-
-
 " ====================================================================================================
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -177,6 +171,8 @@ set hidden
 set shellslash
 
 set startofline
+
+set fileformat=unix
 
 set number
 set background=dark
@@ -311,6 +307,5 @@ endfun
 
 " {{{ load configurations
 silent execute 'source ' . g:MYDIR . '/dict.vim'
-silent execute 'source ' . g:MYDIR . '/autocmd.vim'
 silent execute 'source ' . g:MYDIR . '/keymaps.vim'
 " }}}
