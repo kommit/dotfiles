@@ -54,6 +54,8 @@ plugins=(git autojump tmux tmuxinator web-search fancy-ctrl-z themes python merc
 
 # User configuration
 
+umask 022
+
 export PATH="$HOME/bin:$HOME/.npm-global/bin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 
