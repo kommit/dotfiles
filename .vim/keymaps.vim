@@ -49,6 +49,7 @@ nmap <S-F2> :cd %:p:h<CR>
 
 nmap <F3> :BufExplorer<CR>
 nmap <F4> :BufExplorer<CR>
+nmap <F5> :SyntasticCheck<CR>
 
 " Let F7 insert current time to current location.
 nmap <F7> i<C-R>=strftime("%Y-%m-%d %H:%M:%S")<ESC><ESC>
