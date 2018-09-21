@@ -53,10 +53,9 @@ ZSH_THEME="gnzh"
 plugins=(git autojump tmux tmuxinator web-search fancy-ctrl-z themes python mercurial zsh-autosuggestions zsh-syntax-highlighting)
 
 # User configuration
-
 umask 022
 
-export PATH="$HOME/bin:$HOME/.npm-global/bin:$PATH"
+export PATH="$HOME/bin:$HOME/.local/bin:$HOME/.npm-global/bin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
