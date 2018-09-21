@@ -61,8 +61,6 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-
-
 " ====================================================================================================
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -72,11 +70,14 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
 let g:syntastic_python_checkers = ['pyflakes']
 
-let python_highlight_all=1
+let s:eslint_path =system('PATH=$(npm bin):$PATH && which eslint') "定义eslint_path变量
+let g:syntastic_javascript_checkers = ['eslint']
+let b:syntastic_javascript_eslint_exec = substitute(s:eslint_path, '^\n*\s*\(.\{-}\)\n*\s*$', '\1', '')
 
-let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
+let python_highlight_all=1
 
 " bufExplorer setting
 let g:bufExplorerSortBy='mru'
@@ -91,9 +92,9 @@ autocmd BufWinEnter \[Buf\ List\] setl nonumber
 " to make VCSCommit commit all when opening current directory
 let g:NERDTreeHijackNetrw = 0
 
+let NERDTreeIgnore = ['\.pyc$', '__pycache__$']
+
 let xml_use_xhtml = 1
-
-
 
 " ====================================================================================================
 " allow backspacing over everything in insert mode
@@ -282,19 +283,6 @@ fun! CtagsCmd()
 	silent execute '!' . g:Ctags_Cmd . ' ' . opt
 endfun
 
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let s:eslint_path =system('PATH=$(npm bin):$PATH && which eslint') "定义eslint_path变量
-let g:syntastic_javascript_checkers = ['eslint']
-let b:syntastic_javascript_eslint_exec = substitute(s:eslint_path, '^\n*\s*\(.\{-}\)\n*\s*$', '\1', '')
-
-let NERDTreeIgnore = ['\.pyc$', '__pycache__$']
 
 " }}} Plugin Settings
 
