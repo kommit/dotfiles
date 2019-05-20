@@ -96,6 +96,10 @@ let NERDTreeIgnore = ['\.pyc$', '__pycache__$']
 
 let xml_use_xhtml = 1
 
+
+let delimitMate_matchpairs = "(:),[:],{:}"
+au FileType html let b:delimitMate_matchpairs = "(:),[:],{:},<:>"
+
 " ====================================================================================================
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
