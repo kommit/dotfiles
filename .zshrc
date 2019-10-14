@@ -55,7 +55,7 @@ plugins=(git autojump tmux tmuxinator web-search fancy-ctrl-z themes python merc
 # User configuration
 umask 022
 
-export PATH="$HOME/bin:$HOME/.local/bin:$HOME/.npm-global/bin:$PATH"
+export PATH="$HOME/bin:$HOME/.local/bin:$HOME/.npm-global/bin:$PATH:$HOME/go/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -111,7 +111,10 @@ if [ -d $HOME/.rc.d ]; then
   done
 fi
 
+source $HOME/.zsh_alias
+
 if [ -n "$VIRTUAL_ENV" ]; then
   . "$VIRTUAL_ENV/bin/activate"
 fi
 
+GOPATH=$HOME/go
