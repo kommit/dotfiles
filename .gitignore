@@ -2,7 +2,7 @@
 .hg
 .hgignore
 .netrwhist
-.vim/swap/
-.vim/backup/
-.vim/bundle/
-.vim/plugged/
+dotfiles/.vim/swap/
+dotfiles/.vim/backup/
+dotfiles/.vim/bundle/
+dotfiles/.vim/plugged/

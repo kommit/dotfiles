@@ -50,7 +50,7 @@ ZSH_THEME="gnzh"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git autojump tmux web-search fancy-ctrl-z themes)
+plugins=(git autojump tmux web-search fancy-ctrl-z themes zsh-autosuggestions zsh-syntax-highlighting)
 
 # User configuration
 umask 022
