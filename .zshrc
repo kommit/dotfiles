@@ -50,7 +50,7 @@ ZSH_THEME="gnzh"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git autojump tmux tmuxinator web-search fancy-ctrl-z themes python mercurial)
+plugins=(git autojump tmux web-search fancy-ctrl-z themes)
 
 # User configuration
 umask 022
@@ -112,9 +112,3 @@ if [ -d $HOME/.rc.d ]; then
 fi
 
 source $HOME/.zsh_alias
-
-if [ -n "$VIRTUAL_ENV" ]; then
-  . "$VIRTUAL_ENV/bin/activate"
-fi
-
-GOPATH=$HOME/go
