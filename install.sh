@@ -23,20 +23,23 @@ for dotfile in dotfiles/.*; do
 	echo "linking $src =>  $dst"
 	if [ -L "$dst" ]; then
 		echo "Symlink $dst exists, overwrite"
+		rm $dst
 	elif [ -e "$dst" ]; then
 		echo "File $dst exists, backup as $dst.kommit-backup"
 		mv "$dst" "$dst.kommit-backup"
 	else
 		echo "$dst not exists, create"
 	fi
-	ln -sf "$src" "$dst"
+	ln -s "$src" "$dst"
 	echo
 done
 
 ZSH_CUSTOM=$ZSH/custom
-git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+git clone --depth 1 https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
+git clone --depth 1 https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
 
 cd ~/.vim/
 mkdir backup
 mkdir swap
+
+vim +PlugInstall +qall
