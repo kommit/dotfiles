@@ -37,6 +37,7 @@ done
 ZSH_CUSTOM=$ZSH/custom
 git clone --depth 1 https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
 git clone --depth 1 https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+git clone --depth 1 https://github.com/kommit/zsh-auto-venv.git $ZSH_CUSTOM/plugins/zsh-auto-venv
 
 cd ~/.vim/
 mkdir backup
