@@ -27,6 +27,7 @@ filetype off                  " required
 call plug#begin('~/.vim/plugged')
 
 " My plugins
+Plug 'vim-scripts/a.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'jlanzarotta/bufexplorer'
 Plug 'inkarkat/vcscommand.vim'
@@ -212,6 +213,9 @@ let &backupdir=g:MYDIR . "/backup"
 set backupcopy=yes
 set backup
 set writebackup
+
+set exrc
+set secure
 
 " '-' is a keyword in modern programming language
 " set iskeyword+=-
